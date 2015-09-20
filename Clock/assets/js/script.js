@@ -17,7 +17,8 @@ $(document).ready(function(){
 		var	second = now.getSeconds().toString();
 		var firstMinute;
 		var secondMinute;
-		if(minute.lenght == 1){
+		if(minute.length == 1){
+			firstMinute = 0;
 			secondMinute = minute;
 		}
 		else{
@@ -26,7 +27,8 @@ $(document).ready(function(){
 		}
 		var firstHour;
 		var secondHour;
-		if(hour.lenght == 1){
+		if(hour.length == 1){
+			firstHour = 0;
 			secondHour = hour;
 		}
 		else{
@@ -35,7 +37,8 @@ $(document).ready(function(){
 		}
 		var firstSecond;
 		var secondSecond;
-		if(second.lenght == 1){
+		if(second.length == 1){
+			firstSecond = 0;
 			secondSecond = second;
 		}
 		else{
