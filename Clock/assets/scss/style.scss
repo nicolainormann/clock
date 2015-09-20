@@ -1,0 +1,522 @@
+@import "variables";
+
+.separator{
+	width: 50px;
+	height: 150px;
+	display: block;
+	float:left;
+	margin-right: 50px;
+
+	.dot0,
+	.dot1{
+		margin-top: 50px;
+		background-color: $black;
+		border-radius: 5px;
+		height: 50px;
+		width: 50px;
+		float:left;
+	}
+}
+
+.separator.tick{
+	.dot0,
+	.dot1{
+		background-color: $white;
+	}
+}
+
+.digit{
+	width:150px;
+	height: 250px;
+	display: block;
+	float:left;
+	margin-right: 50px;
+
+	.row0,
+	.row1,
+	.row2,
+	.row3,
+	.row4{
+		display: block;
+		float:left;
+		height: 50px;
+		width: 150px;
+		transform-style:preserve-3d;
+		transition:transform 0.5s ease;
+	}
+
+	.plane{
+		height: 50px;
+		position: relative;
+	}
+
+	.plane0{
+		transform: rotateY(0deg) translateZ(75px);
+	}
+
+	.plane1{
+		transform: rotateY(90deg) translateZ(75px);
+		top:-50px;
+	}
+
+	.plane2{
+		transform: rotateY(180deg) translateZ(75px);
+		top:-100px;
+	}
+
+	.plane3{
+		transform: rotateY(270deg) translateZ(75px);
+		top:-150px;
+	}
+
+	.pixel0,
+	.pixel1,
+	.pixel2{
+		float:left;
+		width: 48px;
+		height: 48px;
+		border-radius: 5px;
+		border:1px solid $white;
+	}
+
+	.row0{
+		.plane0{
+			.pixel0,
+			.pixel1,
+			.pixel2{
+				background-color: $black;
+			}
+		}
+
+		.plane1{
+			.pixel0,
+			.pixel1{
+				background-color: $white;
+			}
+
+			.pixel2{
+				background-color: $black;
+			}
+		}
+
+		.plane2{
+			.pixel0,
+			.pixel1,
+			.pixel2{
+				background-color: $white;
+			}
+		}
+
+		.plane3{
+			.pixel0,
+			.pixel2{
+				background-color: $black;
+			}
+
+			.pixel1{
+				background-color: $white;
+			}
+		}		
+	}
+
+	.row1{
+		.plane0{
+			.pixel0,
+			.pixel2{
+				background-color: $black;
+			}
+
+			.pixel1{
+				background-color: $white;
+			}
+		}
+
+		.plane1{
+			.pixel0,
+			.pixel1{
+				background-color: $white;
+			}
+
+			.pixel2{
+				background-color: $black;
+			}
+		}
+
+		.plane2{
+			.pixel1,
+			.pixel2{
+				background-color: $white;
+			}
+
+			.pixel0{
+				background-color: $black;
+			}
+		}
+
+		.plane3{
+			.pixel0,
+			.pixel1,
+			.pixel2{
+				background-color: $white;
+			}
+		}		
+	}
+
+	.row2{
+		.plane0{
+			.pixel0,
+			.pixel2{
+				background-color: $black;
+			}
+
+			.pixel1{
+				background-color: $white;
+			}
+		}
+
+		.plane1{
+			.pixel0,
+			.pixel1,
+			.pixel2{
+				background-color: $white;
+			}
+		}
+
+		.plane2{
+			.pixel0,
+			.pixel1{
+				background-color: $white;
+			}
+
+			.pixel2{
+				background-color: $black;
+			}
+		}
+
+		.plane3{
+			.pixel0,
+			.pixel1,
+			.pixel2{
+				background-color: $black;
+			}
+		}		
+	}
+
+	.row3{
+		.plane0{
+			.pixel0,
+			.pixel2{
+				background-color: $black;
+			}
+
+			.pixel1{
+				background-color: $white;
+			}
+		}
+
+		.plane1{
+			.pixel0,
+			.pixel1{
+				background-color: $white;
+			}
+
+			.pixel2{
+				background-color: $black;
+			}
+		}
+
+		.plane2{
+			.pixel1,
+			.pixel2{
+				background-color: $white;
+			}
+
+			.pixel0{
+				background-color: $black;
+			}
+		}
+
+		.plane3{
+			.pixel0,
+			.pixel1,
+			.pixel2{
+				background-color: $black;
+			}
+		}		
+	}
+
+	.row4{
+		.plane0{
+			.pixel0,
+			.pixel1,
+			.pixel2{
+				background-color: $black;
+			}
+		}
+
+		.plane1{
+			.pixel0,
+			.pixel1,
+			.pixel2{
+				background-color: $white;
+			}
+		}
+
+		.plane2{
+			.pixel1,
+			.pixel2{
+				background-color: $white;
+			}
+
+			.pixel0{
+				background-color: $black;
+			}
+		}
+
+		.plane3{
+			.pixel0,
+			.pixel1{
+				background-color: $white;
+			}
+
+			.pixel2{
+				background-color: $black;
+			}
+		}		
+	}
+	// .p0{
+	// 	transform: rotateY(0deg);
+	// }
+
+	// .p1{
+	// 	transform: rotateY(-90deg);
+	// }
+
+	// .p2{
+	// 	transform: rotateY(-180deg);
+	// }
+
+	// .p3{
+	// 	transform: rotateY(-270deg);
+	// }
+}
+
+.digit[data-value="0"]{
+	.row0{
+		transform: rotateY(0deg);
+	}
+
+	.row1{
+		transform: rotateY(0deg);
+	}
+
+	.row2{
+		transform: rotateY(0deg);
+	}
+
+	.row3{
+		transform: rotateY(0deg);
+	}
+
+	.row4{
+		transform: rotateY(0deg);
+	}
+}
+
+.digit[data-value="1"]{
+	.row0{
+		transform: rotateY(-90deg);
+	}
+
+	.row1{
+		transform: rotateY(-90deg);
+	}
+
+	.row2{
+		transform: rotateY(-180deg);
+	}
+
+	.row3{
+		transform: rotateY(-90deg);
+	}
+
+	.row4{
+		transform: rotateY(-270deg);
+	}	
+}
+
+.digit[data-value="2"]{
+	.row0{
+		transform: rotateY(0deg);
+	}
+
+	.row1{
+		transform: rotateY(-90deg);
+	}
+
+	.row2{
+		transform: rotateY(-270deg);
+	}
+
+	.row3{
+		transform: rotateY(-180deg);
+	}
+
+	.row4{
+		transform: rotateY(0deg);
+	}	
+}
+
+.digit[data-value="3"]{
+	.row0{
+		transform: rotateY(0deg);
+	}
+
+	.row1{
+		transform: rotateY(-90deg);
+	}
+
+	.row2{
+		transform: rotateY(-270deg);
+	}
+
+	.row3{
+		transform: rotateY(-90deg);
+	}
+
+	.row4{
+		transform: rotateY(0deg);
+	}
+}
+
+.digit[data-value="4"]{
+	.row0{
+		transform: rotateY(-270deg);
+	}
+
+	.row1{
+		transform: rotateY(0deg);
+	}
+
+	.row2{
+		transform: rotateY(-270deg);
+	}
+
+	.row3{
+		transform: rotateY(-90deg);
+	}
+
+	.row4{
+		transform: rotateY(-270deg);
+	}
+}
+
+.digit[data-value="5"]{
+	.row0{
+		transform: rotateY(0deg);
+	}
+
+	.row1{
+		transform: rotateY(-180deg);
+	}
+
+	.row2{
+		transform: rotateY(-270deg);
+	}
+
+	.row3{
+		transform: rotateY(-90deg);
+	}
+
+	.row4{
+		transform: rotateY(0deg);
+	}	
+}
+
+.digit[data-value="6"]{
+	.row0{
+		transform: rotateY(0deg);
+	}
+
+	.row1{
+		transform: rotateY(-180deg);
+	}
+
+	.row2{
+		transform: rotateY(-270deg);
+	}
+
+	.row3{
+		transform: rotateY(0deg);
+	}
+
+	.row4{
+		transform: rotateY(0deg);
+	}
+}
+
+.digit[data-value="7"]{
+	.row0{
+		transform: rotateY(0deg);
+	}
+
+	.row1{
+		transform: rotateY(-90deg);
+	}
+
+	.row2{
+		transform: rotateY(-180deg);
+	}
+
+	.row3{
+		transform: rotateY(-90deg);
+	}
+
+	.row4{
+		transform: rotateY(-270deg);
+	}
+}
+
+.digit[data-value="8"]{
+	.row0{
+		transform: rotateY(0deg);
+	}
+
+	.row1{
+		transform: rotateY(0deg);
+	}
+
+	.row2{
+		transform: rotateY(-270deg);
+	}
+
+	.row3{
+		transform: rotateY(0deg);
+	}
+
+	.row4{
+		transform: rotateY(0deg);
+	}
+}
+
+.digit[data-value="9"]{
+	.row0{
+		transform: rotateY(0deg);
+	}
+
+	.row1{
+		transform: rotateY(0deg);
+	}
+
+	.row2{
+		transform: rotateY(-270deg);
+	}
+
+	.row3{
+		transform: rotateY(-90deg);
+	}
+
+	.row4{
+		transform: rotateY(0deg);
+	}
+}
